@@ -1,5 +1,5 @@
 
-package java;
+
 import java.util.Scanner;
 public class coba3 {
     public static void main (String[]args) {

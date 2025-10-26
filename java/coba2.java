@@ -1,4 +1,4 @@
-package java;
+
 public class coba2 {
     public static void main(String[]args) {
         String nama = "Nindia";
