@@ -6,8 +6,8 @@ $jumlah = intval(readline("Masukkan jumlah beli: "));
 
 $total = $harga * $jumlah;
 
-if ($total > 200000) {
-    $diskon = $total * 0.2;
+if ($total > 25600) {
+    $diskon = $total * 0.60;
 } else {
     $diskon = 0;
 }
@@ -23,3 +23,4 @@ echo "Diskon        : $diskon\n";
 echo "Total Bayar   : $total_bayar\n";
 echo "============================\n";
 ?>
+
