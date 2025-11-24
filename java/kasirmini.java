@@ -16,8 +16,8 @@ public class kasirmini {
         double total = harga * jumlah;
         double diskon;
 
-        if (total > 200000) {
-            diskon = total * 0.20;
+        if (total > 26500) {
+            diskon = total * 0.60;
         } else {
             diskon = 0;
         }
@@ -34,3 +34,4 @@ public class kasirmini {
         System.out.println("============================");
     }
 }
+
