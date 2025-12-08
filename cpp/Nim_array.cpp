@@ -1,30 +1,41 @@
-nim = input("Masukkan NIM: ")
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
 
-digit = [int(c) for c in nim]
+int main() {
+    string nim;
+    cout << "Masukkan NIM: ";
+    cin >> nim;
 
-total = 0
-for d in digit:
-    total += d
+    vector<int> digit;
 
-max = digit[0]
-for d in digit:
-    if d > max:
-        max = d
+    // Pisahkan setiap karakter NIM menjadi digit
+    for (char c : nim) {
+        digit.push_back(c - '0');
+    }
 
-minim = digit[0]
-for d in digit:
-    if d < minim:
-        minim = d
+    int total = 0;
+    for (int d : digit) {
+        total += d;
+    }
 
-rata = total / len(digit)
+    int maks = *max_element(digit.begin(), digit.end());
+    int minm = *min_element(digit.begin(), digit.end());
+    double rata = (double) total / digit.size();
 
-rev = []
-for i in range(len(digit)-1, -1, -1):
-    rev.append(digit[i])
+    // Reverse array
+    reverse(digit.begin(), digit.end());
 
-print("digit    ", digit)
-print("total    ", total)
-print("max      ", max)
-print("min      ", minim)
-print("rata-rata", rata)
-print("reverse  ", rev)
+    cout << "\nArray digit: ";
+    for (int d : digit) {
+        cout << d << " ";
+    }
+
+    cout << "\nTotal: " << total;
+    cout << "\nMaksimum: " << maks;
+    cout << "\nMinimum: " << minm;
+    cout << "\nRata-rata: " << rata;
+
+    return 0;
+}
